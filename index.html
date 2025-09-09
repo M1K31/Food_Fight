@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's for Dinner? - The Ultimate Showdown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>What's for Dinner?</h1>
+        <p>Let the battle for your dinner begin!</p>
+    </header>
+
+    <main>
+        <section id="preferences">
+            <h2>Your Preferences</h2>
+            <form id="preferences-form">
+                <div class="form-group">
+                    <label for="cuisine">Cuisine:</label>
+                    <select id="cuisine" name="cuisine">
+                        <option value="any">Any</option>
+                        <option value="italian">Italian</option>
+                        <option value="mexican">Mexican</option>
+                        <option value="chinese">Chinese</option>
+                        <option value="indian">Indian</option>
+                        <option value="american">American</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="budget">Budget:</label>
+                    <select id="budget" name="budget">
+                        <option value="any">Any</option>
+                        <option value="1">$</option>
+                        <option value="2">$$</option>
+                        <option value="3">$$$</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="distance">Max Distance (miles):</label>
+                    <input type="range" id="distance" name="distance" min="1" max="50" value="5">
+                    <span id="distance-value">5 miles</span>
+                </div>
+                <button type="submit">Start the Tournament!</button>
+            </form>
+        </section>
+
+        <section id="tournament-section">
+            <h2>Dinner Tournament</h2>
+            <div id="tournament-container">
+                <!-- The tournament bracket with videos will be generated here by script.js -->
+            </div>
+        </section>
+
+        <section id="winner-section">
+            <h2>And the champion is...</h2>
+            <div id="winner-display">
+                <!-- The winning restaurant will be displayed here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="restaurants.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
