@@ -19,48 +19,44 @@
                 <div class="form-group">
                     <label for="cuisine">Cuisine:</label>
                     <select id="cuisine" name="cuisine">
-                        <option value="any">Any</option>
                         <option value="italian">Italian</option>
                         <option value="mexican">Mexican</option>
                         <option value="chinese">Chinese</option>
                         <option value="indian">Indian</option>
                         <option value="american">American</option>
+                        <option value="japanese">Japanese</option>
+                        <option value="thai">Thai</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="budget">Budget:</label>
-                    <select id="budget" name="budget">
-                        <option value="any">Any</option>
-                        <option value="1">$</option>
-                        <option value="2">$$</option>
-                        <option value="3">$$$</option>
-                    </select>
+                    <label for="zip-code">Zip Code:</label>
+                    <input type="text" id="zip-code" name="zip-code" placeholder="e.g., 90210">
                 </div>
-                <div class="form-group">
-                    <label for="distance">Max Distance (miles):</label>
-                    <input type="range" id="distance" name="distance" min="1" max="50" value="5">
-                    <span id="distance-value">5 miles</span>
-                </div>
-                <button type="submit">Start the Tournament!</button>
+                <button type="submit" id="zip-code-btn">Find Restaurants by Zip</button>
             </form>
+
+            <div class="separator">or</div>
+
+            <button type="button" id="use-location-btn">Find Restaurants Near Me</button>
+
+            <div id="location-status"></div>
+
+            <p class="privacy-notice">
+                Disclaimer: While location data may be gathered, it is not associated with any person or device. Location information is only used to populate results and reduce redundant requests for location information.
+            </p>
         </section>
 
-        <section id="tournament-section">
-            <h2>Dinner Tournament</h2>
-            <div id="tournament-container">
-                <!-- The tournament bracket with videos will be generated here by script.js -->
+        <section id="battle-section">
+            <h2>The Battle</h2>
+            <div id="battle-container">
+                <!-- Battle images will be generated here -->
             </div>
-        </section>
-
-        <section id="winner-section">
-            <h2>And the champion is...</h2>
             <div id="winner-display">
                 <!-- The winning restaurant will be displayed here -->
             </div>
         </section>
     </main>
 
-    <script src="restaurants.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
