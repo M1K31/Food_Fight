@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const preferencesForm = document.getElementById('preferences-form');
     const zipCodeBtn = document.getElementById('zip-code-btn');
     const useLocationBtn = document.getElementById('use-location-btn');
-
+    
     const battleContainer = document.getElementById('battle-container');
     const winnerDisplay = document.getElementById('winner-display');
     const locationStatus = document.getElementById('location-status');
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Disable buttons to prevent multiple clicks
         zipCodeBtn.disabled = true;
         useLocationBtn.disabled = true;
-
+        
         battleContainer.innerHTML = '<p>Loading battle...</p>';
         winnerDisplay.innerHTML = '';
         locationStatus.textContent = 'Finding restaurants...';
